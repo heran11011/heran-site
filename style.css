@@ -390,9 +390,16 @@ body {
 }
 
 /* === Bento Cards (Glassmorphism) === */
-a.bento-card {
-    text-decoration: none;
+a.bento-card,
+a.bento-card:hover,
+a.bento-card:visited,
+a.bento-card:active,
+a.bento-card * {
+    text-decoration: none !important;
     color: inherit;
+}
+
+a.bento-card {
     display: block;
 }
 
