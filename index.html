@@ -7,16 +7,10 @@
     <meta name="description" content="Building with AI. Creating for humans. AI自媒体人 / Cola运营 / 嵌入式开发">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Circle Reveal Overlay -->
-    <div class="page-reveal" id="pageReveal"></div>
-
-    <!-- Cursor Glow -->
-    <div class="cursor-glow" id="cursorGlow"></div>
-
     <div class="layout">
         <!-- Left Panel (Fixed) -->
         <aside class="left-panel">
@@ -28,12 +22,41 @@
 
                 <h1 class="name">Heran</h1>
                 <p class="name-cn">禾冉</p>
-                <p class="tagline">Building with AI. Creating for humans.</p>
+                <p class="tagline">大三 · 物联网工程<br>Mars Waver · Cola 运营</p>
 
-                <div class="pills">
-                    <span class="pill">AI Creator</span>
-                    <span class="pill">Cola Ops</span>
-                    <span class="pill">IoT Dev</span>
+                <!-- Status Widget -->
+                <div class="status-widget">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Active & Crafting</span>
+                </div>
+
+                <!-- Skill Bars -->
+                <div class="skill-bars">
+                    <div class="skill-bar" data-skill="Prompt Engineering" data-level="95">
+                        <div class="skill-bar__label">Prompt Engineering</div>
+                        <div class="skill-bar__track"><div class="skill-bar__fill" style="--level: 95%"></div></div>
+                    </div>
+                    <div class="skill-bar" data-skill="AI Agent Dev" data-level="88">
+                        <div class="skill-bar__label">AI Agent Dev</div>
+                        <div class="skill-bar__track"><div class="skill-bar__fill" style="--level: 88%"></div></div>
+                    </div>
+                    <div class="skill-bar" data-skill="Content Creation" data-level="90">
+                        <div class="skill-bar__label">Content Creation</div>
+                        <div class="skill-bar__track"><div class="skill-bar__fill" style="--level: 90%"></div></div>
+                    </div>
+                    <div class="skill-bar" data-skill="IoT / Embedded" data-level="75">
+                        <div class="skill-bar__label">IoT / Embedded</div>
+                        <div class="skill-bar__track"><div class="skill-bar__fill" style="--level: 75%"></div></div>
+                    </div>
+                    <div class="skill-bar" data-skill="Operations" data-level="85">
+                        <div class="skill-bar__label">Operations</div>
+                        <div class="skill-bar__track"><div class="skill-bar__fill" style="--level: 85%"></div></div>
+                    </div>
+                </div>
+
+                <div class="ai-hours">
+                    <span class="ai-hours__number">8h</span>
+                    <span class="ai-hours__label">AI Daily</span>
                 </div>
 
                 <nav class="nav">
@@ -51,18 +74,27 @@
                     </a>
                 </nav>
 
-                <div class="social-icons">
-                    <a href="https://github.com/heran11011" target="_blank" rel="noopener" aria-label="GitHub" class="social-link">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <!-- Social Capsules -->
+                <div class="social-capsules">
+                    <a href="https://github.com/heran11011" target="_blank" rel="noopener" aria-label="GitHub" class="social-capsule">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        <span>GitHub</span>
                     </a>
-                    <a href="https://xhslink.com/m/7WmXtCu7l4s" target="_blank" rel="noopener" aria-label="小红书" class="social-link">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M22.405 9.879c.002.016.01.02.07.019h.725a.797.797 0 0 0 .78-.972.794.794 0 0 0-.884-.618.795.795 0 0 0-.692.794c0 .101-.002.666.001.777zm-11.509 4.808c-.203.001-1.353.004-1.685.003a2.528 2.528 0 0 1-.766-.126.025.025 0 0 0-.03.014L7.7 16.127a.025.025 0 0 0 .01.032c.111.06.336.124.495.124.66.01 1.32.002 1.981 0 .01 0 .02-.006.023-.015l.712-1.545a.025.025 0 0 0-.024-.036zM.477 9.91c-.071 0-.076.002-.076.01a.834.834 0 0 0-.01.08c-.027.397-.038.495-.234 3.06-.012.24-.034.389-.135.607-.026.057-.033.042.003.112.046.092.681 1.523.787 1.74.008.015.011.02.017.02.008 0 .033-.026.047-.044.147-.187.268-.391.371-.606.306-.635.44-1.325.486-1.706.014-.11.021-.22.03-.33l.204-2.616.022-.293c.003-.029 0-.033-.03-.034zm7.203 3.757a1.427 1.427 0 0 1-.135-.607c-.004-.084-.031-.39-.235-3.06a.443.443 0 0 0-.01-.082c-.004-.011-.052-.008-.076-.008h-1.48c-.03.001-.034.005-.03.034l.021.293c.076.982.153 1.964.233 2.946.05.4.186 1.085.487 1.706.103.215.223.419.37.606.015.018.037.051.048.049.02-.003.742-1.642.804-1.765.036-.07.03-.055.003-.112zm3.861-.913h-.872a.126.126 0 0 1-.116-.178l1.178-2.625a.025.025 0 0 0-.023-.035l-1.318-.003a.148.148 0 0 1-.135-.21l.876-1.954a.025.025 0 0 0-.023-.035h-1.56c-.01 0-.02.006-.024.015l-.926 2.068c-.085.169-.314.634-.399.938a.534.534 0 0 0-.02.191.46.46 0 0 0 .23.378.981.981 0 0 0 .46.119h.59c.041 0-.688 1.482-.834 1.972a.53.53 0 0 0-.023.172.465.465 0 0 0 .23.398c.15.092.342.12.475.12l1.66-.001c.01 0 .02-.006.023-.015l.575-1.28a.025.025 0 0 0-.024-.035zm-6.93-4.937H3.1a.032.032 0 0 0-.034.033c0 1.048-.01 2.795-.01 6.829 0 .288-.269.262-.28.262h-.74c-.04.001-.044.004-.04.047.001.037.465 1.064.555 1.263.01.02.03.033.051.033.157.003.767.009.938-.014.153-.02.3-.06.438-.132.3-.156.49-.419.595-.765.052-.172.075-.353.075-.533.002-2.33 0-4.66-.007-6.991a.032.032 0 0 0-.032-.032zm11.784 6.896c0-.014-.01-.021-.024-.022h-1.465c-.048-.001-.049-.002-.05-.049v-4.66c0-.072-.005-.07.07-.07h.863c.08 0 .075.004.075-.074V8.393c0-.082.006-.076-.08-.076h-3.5c-.064 0-.075-.006-.075.073v1.445c0 .083-.006.077.08.077h.854c.075 0 .07-.004.07.07v4.624c0 .095.008.084-.085.084-.37 0-1.11-.002-1.304 0-.048.001-.06.03-.06.03l-.697 1.519s-.014.025-.008.036c.006.01.013.008.058.008 1.748.003 3.495.002 5.243.002.03-.001.034-.006.035-.033v-1.539zm4.177-3.43c0 .013-.007.023-.02.024-.346.006-.692.004-1.037.004-.014-.002-.022-.01-.022-.024-.005-.434-.007-.869-.01-1.303 0-.072-.006-.071.07-.07l.733-.003c.041 0 .081.002.12.015.093.025.16.107.165.204.006.431.002 1.153.001 1.153zm2.67.244a1.953 1.953 0 0 0-.883-.222h-.18c-.04-.001-.04-.003-.042-.04V10.21c0-.132-.007-.263-.025-.394a1.823 1.823 0 0 0-.153-.53 1.533 1.533 0 0 0-.677-.71 2.167 2.167 0 0 0-1-.258c-.153-.003-.567 0-.72 0-.07 0-.068.004-.068-.065V7.76c0-.031-.01-.041-.046-.039H17.93s-.016 0-.023.007c-.006.006-.008.012-.008.023v.546c-.008.036-.057.015-.082.022h-.95c-.022.002-.028.008-.03.032v1.481c0 .09-.004.082.082.082h.913c.082 0 .072.128.072.128V11.19s.003.117-.06.117h-1.482c-.068 0-.06.082-.06.082v1.445s-.01.068.064.068h1.457c.082 0 .076-.006.076.079v3.225c0 .088-.007.081.082.081h1.43c.09 0 .082.007.082-.08v-3.27c0-.029.006-.035.033-.035l2.323-.003c.098 0 .191.02.28.061a.46.46 0 0 1 .274.407c.008.395.003.79.003 1.185 0 .259-.107.367-.33.367h-1.218c-.023.002-.029.008-.028.033.184.437.374.871.57 1.303a.045.045 0 0 0 .04.026c.17.005.34.002.51.003.15-.002.517.004.666-.01a2.03 2.03 0 0 0 .408-.075c.59-.18.975-.698.976-1.313v-1.981c0-.128-.01-.254-.034-.38 0 .078-.029-.641-.724-.998z"/></svg>
+                    <a href="https://xhslink.com/m/7WmXtCu7l4s" target="_blank" rel="noopener" aria-label="小红书" class="social-capsule">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M22.405 9.879c.002.016.01.02.07.019h.725a.797.797 0 0 0 .78-.972.794.794 0 0 0-.884-.618.795.795 0 0 0-.692.794c0 .101-.002.666.001.777zm-11.509 4.808c-.203.001-1.353.004-1.685.003a2.528 2.528 0 0 1-.766-.126.025.025 0 0 0-.03.014L7.7 16.127a.025.025 0 0 0 .01.032c.111.06.336.124.495.124.66.01 1.32.002 1.981 0 .01 0 .02-.006.023-.015l.712-1.545a.025.025 0 0 0-.024-.036zM.477 9.91c-.071 0-.076.002-.076.01a.834.834 0 0 0-.01.08c-.027.397-.038.495-.234 3.06-.012.24-.034.389-.135.607-.026.057-.033.042.003.112.046.092.681 1.523.787 1.74.008.015.011.02.017.02.008 0 .033-.026.047-.044.147-.187.268-.391.371-.606.306-.635.44-1.325.486-1.706.014-.11.021-.22.03-.33l.204-2.616.022-.293c.003-.029 0-.033-.03-.034zm7.203 3.757a1.427 1.427 0 0 1-.135-.607c-.004-.084-.031-.39-.235-3.06a.443.443 0 0 0-.01-.082c-.004-.011-.052-.008-.076-.008h-1.48c-.03.001-.034.005-.03.034l.021.293c.076.982.153 1.964.233 2.946.05.4.186 1.085.487 1.706.103.215.223.419.37.606.015.018.037.051.048.049.02-.003.742-1.642.804-1.765.036-.07.03-.055.003-.112zm3.861-.913h-.872a.126.126 0 0 1-.116-.178l1.178-2.625a.025.025 0 0 0-.023-.035l-1.318-.003a.148.148 0 0 1-.135-.21l.876-1.954a.025.025 0 0 0-.023-.035h-1.56c-.01 0-.02.006-.024.015l-.926 2.068c-.085.169-.314.634-.399.938a.534.534 0 0 0-.02.191.46.46 0 0 0 .23.378.981.981 0 0 0 .46.119h.59c.041 0-.688 1.482-.834 1.972a.53.53 0 0 0-.023.172.465.465 0 0 0 .23.398c.15.092.342.12.475.12l1.66-.001c.01 0 .02-.006.023-.015l.575-1.28a.025.025 0 0 0-.024-.035zm-6.93-4.937H3.1a.032.032 0 0 0-.034.033c0 1.048-.01 2.795-.01 6.829 0 .288-.269.262-.28.262h-.74c-.04.001-.044.004-.04.047.001.037.465 1.064.555 1.263.01.02.03.033.051.033.157.003.767.009.938-.014.153-.02.3-.06.438-.132.3-.156.49-.419.595-.765.052-.172.075-.353.075-.533.002-2.33 0-4.66-.007-6.991a.032.032 0 0 0-.032-.032zm11.784 6.896c0-.014-.01-.021-.024-.022h-1.465c-.048-.001-.049-.002-.05-.049v-4.66c0-.072-.005-.07.07-.07h.863c.08 0 .075.004.075-.074V8.393c0-.082.006-.076-.08-.076h-3.5c-.064 0-.075-.006-.075.073v1.445c0 .083-.006.077.08.077h.854c.075 0 .07-.004.07.07v4.624c0 .095.008.084-.085.084-.37 0-1.11-.002-1.304 0-.048.001-.06.03-.06.03l-.697 1.519s-.014.025-.008.036c.006.01.013.008.058.008 1.748.003 3.495.002 5.243.002.03-.001.034-.006.035-.033v-1.539zm4.177-3.43c0 .013-.007.023-.02.024-.346.006-.692.004-1.037.004-.014-.002-.022-.01-.022-.024-.005-.434-.007-.869-.01-1.303 0-.072-.006-.071.07-.07l.733-.003c.041 0 .081.002.12.015.093.025.16.107.165.204.006.431.002 1.153.001 1.153zm2.67.244a1.953 1.953 0 0 0-.883-.222h-.18c-.04-.001-.04-.003-.042-.04V10.21c0-.132-.007-.263-.025-.394a1.823 1.823 0 0 0-.153-.53 1.533 1.533 0 0 0-.677-.71 2.167 2.167 0 0 0-1-.258c-.153-.003-.567 0-.72 0-.07 0-.068.004-.068-.065V7.76c0-.031-.01-.041-.046-.039H17.93s-.016 0-.023.007c-.006.006-.008.012-.008.023v.546c-.008.036-.057.015-.082.022h-.95c-.022.002-.028.008-.03.032v1.481c0 .09-.004.082.082.082h.913c.082 0 .072.128.072.128V11.19s.003.117-.06.117h-1.482c-.068 0-.06.082-.06.082v1.445s-.01.068.064.068h1.457c.082 0 .076-.006.076.079v3.225c0 .088-.007.081.082.081h1.43c.09 0 .082.007.082-.08v-3.27c0-.029.006-.035.033-.035l2.323-.003c.098 0 .191.02.28.061a.46.46 0 0 1 .274.407c.008.395.003.79.003 1.185 0 .259-.107.367-.33.367h-1.218c-.023.002-.029.008-.028.033.184.437.374.871.57 1.303a.045.045 0 0 0 .04.026c.17.005.34.002.51.003.15-.002.517.004.666-.01a2.03 2.03 0 0 0 .408-.075c.59-.18.975-.698.976-1.313v-1.981c0-.128-.01-.254-.034-.38 0 .078-.029-.641-.724-.998z"/></svg>
+                        <span>小红书</span>
                     </a>
-                    <a href="https://b23.tv/qxpgt92" target="_blank" rel="noopener" aria-label="Bilibili" class="social-link">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 01-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 01.16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.124.929.373.249.249.373.551.373.907 0 .355-.124.657-.373.906L17.813 4.653zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773H5.333zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373z"/></svg>
+                    <a href="https://b23.tv/qxpgt92" target="_blank" rel="noopener" aria-label="Bilibili" class="social-capsule">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 01-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 01.16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.124.929.373.249.249.373.551.373.907 0 .355-.124.657-.373.906L17.813 4.653zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773H5.333zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373z"/></svg>
+                        <span>B站</span>
                     </a>
-                    <a href="mailto:heran11011@gmail.com" aria-label="Email" class="social-link">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    <a href="https://v.douyin.com/BDTxO6sbhHc/" target="_blank" rel="noopener" aria-label="抖音" class="social-capsule">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.88 2.89 2.89 0 01-2.88-2.88 2.89 2.89 0 012.88-2.88c.28 0 .56.04.82.1V9.4a6.33 6.33 0 00-.82-.05A6.34 6.34 0 003.15 15.7a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V9.05a8.27 8.27 0 004.76 1.5V7.12a4.83 4.83 0 01-1-.43z"/></svg>
+                        <span>抖音</span>
+                    </a>
+                    <a href="mailto:heran11011@gmail.com" aria-label="Email" class="social-capsule">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        <span>Mail</span>
                     </a>
                 </div>
             </div>
@@ -70,24 +102,36 @@
 
         <!-- Right Panel (Scrollable) -->
         <main class="right-panel">
+            <!-- Hero Section -->
+            <section class="hero" data-stagger>
+                <h2 class="hero__title" data-reveal>
+                    <span class="hero__line">Building with AI.</span>
+                    <span class="hero__line hero__line--accent">Creating for humans.</span>
+                </h2>
+                <p class="hero__sub" data-reveal>Maker · AI Creator · IoT Engineer</p>
+            </section>
+
             <!-- Works Section -->
             <section id="works" class="section">
-                <h2 class="section-title">Works</h2>
+                <h2 class="section-title" data-reveal>Works</h2>
                 <div class="bento-grid">
                     <!-- Big Card: DeepSeek 爆款 -->
                     <div class="bento-card bento-card--large" data-reveal>
-                        <div class="bento-card__bg bento-card__bg--warm"></div>
                         <div class="bento-card__content">
                             <span class="bento-card__label">小红书爆款</span>
-                            <div class="bento-card__hero-number">2223</div>
+                            <div class="bento-card__hero-number">2,223</div>
                             <p class="bento-card__subtitle">赞 · DeepSeek 教程帖</p>
                             <p class="bento-card__desc">从零到爆款的 AI 内容创作</p>
+                            <div class="bento-card__tags">
+                                <span class="tech-tag">AI</span>
+                                <span class="tech-tag">Content</span>
+                                <span class="tech-tag">小红书</span>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Stat Card -->
                     <div class="bento-card bento-card--stats" data-reveal>
-                        <div class="bento-card__bg bento-card__bg--deep-blue"></div>
                         <div class="bento-card__content">
                             <div class="stat-row">
                                 <span class="stat-number">6,119</span>
@@ -106,61 +150,81 @@
 
                     <!-- Project Card: cola-video-clipper -->
                     <div class="bento-card bento-card--project" data-reveal>
-                        <div class="bento-card__bg bento-card__bg--deep-green"></div>
                         <div class="bento-card__content">
                             <span class="bento-card__icon">
                                 <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
                             </span>
                             <h3 class="bento-card__title">cola-video-clipper</h3>
                             <p class="bento-card__desc">AI 视频切片工具，自动找爆点、生成封面</p>
+                            <div class="bento-card__tags">
+                                <span class="tech-tag">AI</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">ffmpeg</span>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Project Card: cola-feishu-bridge -->
                     <div class="bento-card bento-card--project" data-reveal>
-                        <div class="bento-card__bg bento-card__bg--deep-purple"></div>
                         <div class="bento-card__content">
                             <span class="bento-card__icon">
                                 <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
                             </span>
                             <h3 class="bento-card__title">cola-feishu-bridge</h3>
                             <p class="bento-card__desc">飞书集成能力，消息/日历/任务/文档全通</p>
+                            <div class="bento-card__tags">
+                                <span class="tech-tag">Feishu SDK</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">API</span>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Project Card: cola-lark-skills -->
                     <div class="bento-card bento-card--project" data-reveal>
-                        <div class="bento-card__bg bento-card__bg--deep-teal"></div>
                         <div class="bento-card__content">
                             <span class="bento-card__icon">
                                 <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
                             </span>
                             <h3 class="bento-card__title">cola-lark-skills</h3>
                             <p class="bento-card__desc">Lark 技能包，Cola × 飞书深度联动</p>
+                            <div class="bento-card__tags">
+                                <span class="tech-tag">AI Agent</span>
+                                <span class="tech-tag">Lark API</span>
+                                <span class="tech-tag">Node.js</span>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Project Card: cola-dingtalk-skills -->
                     <div class="bento-card bento-card--project" data-reveal>
-                        <div class="bento-card__bg bento-card__bg--deep-orange"></div>
                         <div class="bento-card__content">
                             <span class="bento-card__icon">
                                 <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
                             </span>
                             <h3 class="bento-card__title">cola-dingtalk-skills</h3>
                             <p class="bento-card__desc">钉钉技能包，企业场景 AI 助手</p>
+                            <div class="bento-card__tags">
+                                <span class="tech-tag">DingTalk SDK</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Webhook</span>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Text Card: 公众号 -->
                     <div class="bento-card bento-card--text" data-reveal>
-                        <div class="bento-card__bg bento-card__bg--warm-dark"></div>
                         <div class="bento-card__content">
                             <span class="bento-card__icon">
                                 <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
                             </span>
                             <h3 class="bento-card__title">公众号「禾冉一起」</h3>
                             <p class="bento-card__desc">AI 工具分享 · 成长记录 · 技术随笔</p>
+                            <div class="bento-card__tags">
+                                <span class="tech-tag">WeChat</span>
+                                <span class="tech-tag">Writing</span>
+                                <span class="tech-tag">AI</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -168,44 +232,44 @@
 
             <!-- About Section -->
             <section id="about" class="section">
-                <h2 class="section-title">About</h2>
+                <h2 class="section-title" data-reveal>About</h2>
                 <div class="about-content">
-                    <p class="about-big" data-reveal>我是 Heran</p>
-                    <p class="about-small" data-reveal>大三 · 物联网工程</p>
-                    
-                    <div class="about-block" data-reveal>
-                        <p>白天在 Mars Waver 做 Cola 运营</p>
-                        <p>晚上写嵌入式和 IoT</p>
-                        <p>每天和 AI 打交道 8 小时</p>
+                    <div class="about-card glass-card" data-reveal>
+                        <p class="about-big">我是 Heran</p>
+                        <p class="about-small">大三 · 物联网工程</p>
+                        <div class="about-block">
+                            <p>白天在 Mars Waver 做 Cola 运营</p>
+                            <p>晚上写嵌入式和 IoT</p>
+                            <p>每天和 AI 打交道 8 小时</p>
+                        </div>
+                        <blockquote class="about-quote">
+                            「要么学到，要么得到」
+                        </blockquote>
                     </div>
-
-                    <blockquote class="about-quote" data-reveal>
-                        「要么学到，要么得到」
-                    </blockquote>
                 </div>
             </section>
 
             <!-- Connect Section -->
             <section id="connect" class="section">
-                <h2 class="section-title">Connect</h2>
+                <h2 class="section-title" data-reveal>Connect</h2>
                 <div class="connect-grid">
-                    <a href="https://github.com/heran11011" target="_blank" rel="noopener" class="connect-btn connect-btn--github" data-reveal>
+                    <a href="https://github.com/heran11011" target="_blank" rel="noopener" class="connect-capsule" data-reveal>
                         <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
                         <span>GitHub</span>
                     </a>
-                    <a href="https://xhslink.com/m/7WmXtCu7l4s" target="_blank" rel="noopener" class="connect-btn connect-btn--xiaohongshu" data-reveal>
+                    <a href="https://xhslink.com/m/7WmXtCu7l4s" target="_blank" rel="noopener" class="connect-capsule" data-reveal>
                         <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M22.405 9.879c.002.016.01.02.07.019h.725a.797.797 0 0 0 .78-.972.794.794 0 0 0-.884-.618.795.795 0 0 0-.692.794c0 .101-.002.666.001.777zm-11.509 4.808c-.203.001-1.353.004-1.685.003a2.528 2.528 0 0 1-.766-.126.025.025 0 0 0-.03.014L7.7 16.127a.025.025 0 0 0 .01.032c.111.06.336.124.495.124.66.01 1.32.002 1.981 0 .01 0 .02-.006.023-.015l.712-1.545a.025.025 0 0 0-.024-.036zM.477 9.91c-.071 0-.076.002-.076.01a.834.834 0 0 0-.01.08c-.027.397-.038.495-.234 3.06-.012.24-.034.389-.135.607-.026.057-.033.042.003.112.046.092.681 1.523.787 1.74.008.015.011.02.017.02.008 0 .033-.026.047-.044.147-.187.268-.391.371-.606.306-.635.44-1.325.486-1.706.014-.11.021-.22.03-.33l.204-2.616.022-.293c.003-.029 0-.033-.03-.034zm7.203 3.757a1.427 1.427 0 0 1-.135-.607c-.004-.084-.031-.39-.235-3.06a.443.443 0 0 0-.01-.082c-.004-.011-.052-.008-.076-.008h-1.48c-.03.001-.034.005-.03.034l.021.293c.076.982.153 1.964.233 2.946.05.4.186 1.085.487 1.706.103.215.223.419.37.606.015.018.037.051.048.049.02-.003.742-1.642.804-1.765.036-.07.03-.055.003-.112zm3.861-.913h-.872a.126.126 0 0 1-.116-.178l1.178-2.625a.025.025 0 0 0-.023-.035l-1.318-.003a.148.148 0 0 1-.135-.21l.876-1.954a.025.025 0 0 0-.023-.035h-1.56c-.01 0-.02.006-.024.015l-.926 2.068c-.085.169-.314.634-.399.938a.534.534 0 0 0-.02.191.46.46 0 0 0 .23.378.981.981 0 0 0 .46.119h.59c.041 0-.688 1.482-.834 1.972a.53.53 0 0 0-.023.172.465.465 0 0 0 .23.398c.15.092.342.12.475.12l1.66-.001c.01 0 .02-.006.023-.015l.575-1.28a.025.025 0 0 0-.024-.035zm-6.93-4.937H3.1a.032.032 0 0 0-.034.033c0 1.048-.01 2.795-.01 6.829 0 .288-.269.262-.28.262h-.74c-.04.001-.044.004-.04.047.001.037.465 1.064.555 1.263.01.02.03.033.051.033.157.003.767.009.938-.014.153-.02.3-.06.438-.132.3-.156.49-.419.595-.765.052-.172.075-.353.075-.533.002-2.33 0-4.66-.007-6.991a.032.032 0 0 0-.032-.032zm11.784 6.896c0-.014-.01-.021-.024-.022h-1.465c-.048-.001-.049-.002-.05-.049v-4.66c0-.072-.005-.07.07-.07h.863c.08 0 .075.004.075-.074V8.393c0-.082.006-.076-.08-.076h-3.5c-.064 0-.075-.006-.075.073v1.445c0 .083-.006.077.08.077h.854c.075 0 .07-.004.07.07v4.624c0 .095.008.084-.085.084-.37 0-1.11-.002-1.304 0-.048.001-.06.03-.06.03l-.697 1.519s-.014.025-.008.036c.006.01.013.008.058.008 1.748.003 3.495.002 5.243.002.03-.001.034-.006.035-.033v-1.539zm4.177-3.43c0 .013-.007.023-.02.024-.346.006-.692.004-1.037.004-.014-.002-.022-.01-.022-.024-.005-.434-.007-.869-.01-1.303 0-.072-.006-.071.07-.07l.733-.003c.041 0 .081.002.12.015.093.025.16.107.165.204.006.431.002 1.153.001 1.153zm2.67.244a1.953 1.953 0 0 0-.883-.222h-.18c-.04-.001-.04-.003-.042-.04V10.21c0-.132-.007-.263-.025-.394a1.823 1.823 0 0 0-.153-.53 1.533 1.533 0 0 0-.677-.71 2.167 2.167 0 0 0-1-.258c-.153-.003-.567 0-.72 0-.07 0-.068.004-.068-.065V7.76c0-.031-.01-.041-.046-.039H17.93s-.016 0-.023.007c-.006.006-.008.012-.008.023v.546c-.008.036-.057.015-.082.022h-.95c-.022.002-.028.008-.03.032v1.481c0 .09-.004.082.082.082h.913c.082 0 .072.128.072.128V11.19s.003.117-.06.117h-1.482c-.068 0-.06.082-.06.082v1.445s-.01.068.064.068h1.457c.082 0 .076-.006.076.079v3.225c0 .088-.007.081.082.081h1.43c.09 0 .082.007.082-.08v-3.27c0-.029.006-.035.033-.035l2.323-.003c.098 0 .191.02.28.061a.46.46 0 0 1 .274.407c.008.395.003.79.003 1.185 0 .259-.107.367-.33.367h-1.218c-.023.002-.029.008-.028.033.184.437.374.871.57 1.303a.045.045 0 0 0 .04.026c.17.005.34.002.51.003.15-.002.517.004.666-.01a2.03 2.03 0 0 0 .408-.075c.59-.18.975-.698.976-1.313v-1.981c0-.128-.01-.254-.034-.38 0 .078-.029-.641-.724-.998z"/></svg>
                         <span>小红书</span>
                     </a>
-                    <a href="https://v.douyin.com/BDTxO6sbhHc/" target="_blank" rel="noopener" class="connect-btn connect-btn--douyin" data-reveal>
+                    <a href="https://v.douyin.com/BDTxO6sbhHc/" target="_blank" rel="noopener" class="connect-capsule" data-reveal>
                         <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.88 2.89 2.89 0 01-2.88-2.88 2.89 2.89 0 012.88-2.88c.28 0 .56.04.82.1V9.4a6.33 6.33 0 00-.82-.05A6.34 6.34 0 003.15 15.7a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V9.05a8.27 8.27 0 004.76 1.5V7.12a4.83 4.83 0 01-1-.43z"/></svg>
                         <span>抖音</span>
                     </a>
-                    <a href="https://b23.tv/qxpgt92" target="_blank" rel="noopener" class="connect-btn connect-btn--bilibili" data-reveal>
+                    <a href="https://b23.tv/qxpgt92" target="_blank" rel="noopener" class="connect-capsule" data-reveal>
                         <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 01-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 01.16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.124.929.373.249.249.373.551.373.907 0 .355-.124.657-.373.906L17.813 4.653zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773H5.333zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373z"/></svg>
                         <span>B站</span>
                     </a>
-                    <a href="mailto:heran11011@gmail.com" class="connect-btn connect-btn--email" data-reveal>
+                    <a href="mailto:heran11011@gmail.com" class="connect-capsule" data-reveal>
                         <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                         <span>Email</span>
                     </a>
@@ -220,51 +284,37 @@
     </div>
 
     <script>
-        // === Circle Reveal Animation ===
-        const pageReveal = document.getElementById('pageReveal');
-        window.addEventListener('load', () => {
-            pageReveal.classList.add('revealed');
-            setTimeout(() => {
-                pageReveal.style.display = 'none';
-            }, 1200);
-        });
-
-        // === Cursor Glow ===
-        const cursorGlow = document.getElementById('cursorGlow');
-        let mouseX = 0, mouseY = 0;
-        let glowX = 0, glowY = 0;
-
-        document.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-        });
-
-        function animateGlow() {
-            glowX += (mouseX - glowX) * 0.08;
-            glowY += (mouseY - glowY) * 0.08;
-            cursorGlow.style.transform = `translate(${glowX - 150}px, ${glowY - 150}px)`;
-            requestAnimationFrame(animateGlow);
-        }
-        animateGlow();
-
-        // === Scroll Reveal with Stagger ===
+        // === Staggered Entrance Animation ===
         const revealElements = document.querySelectorAll('[data-reveal]');
         
         const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
+            entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
+                    // Add stagger delay based on position in viewport
+                    const siblings = Array.from(entry.target.parentElement.querySelectorAll('[data-reveal]'));
+                    const idx = siblings.indexOf(entry.target);
+                    entry.target.style.transitionDelay = `${idx * 80}ms`;
                     entry.target.classList.add('revealed');
                     revealObserver.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
 
-        revealElements.forEach((el, i) => {
-            el.style.transitionDelay = `${i * 50}ms`;
+        revealElements.forEach((el) => {
             revealObserver.observe(el);
         });
 
-        // === Navigation Active State (Intersection Observer) ===
+        // === Skill Bars Animation ===
+        const skillBars = document.querySelectorAll('.skill-bar__fill');
+        setTimeout(() => {
+            skillBars.forEach((bar, i) => {
+                setTimeout(() => {
+                    bar.classList.add('animated');
+                }, i * 150);
+            });
+        }, 600);
+
+        // === Navigation Active State ===
         const sections = document.querySelectorAll('.section');
         const navLinks = document.querySelectorAll('.nav-link');
 
@@ -287,6 +337,20 @@
                 e.preventDefault();
                 const target = document.getElementById(link.dataset.section);
                 target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // === Magnetic Capsule Effect ===
+        const capsules = document.querySelectorAll('.social-capsule, .connect-capsule');
+        capsules.forEach(capsule => {
+            capsule.addEventListener('mousemove', (e) => {
+                const rect = capsule.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                capsule.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px) scale(1.05)`;
+            });
+            capsule.addEventListener('mouseleave', () => {
+                capsule.style.transform = 'translate(0, 0) scale(1)';
             });
         });
     </script>
