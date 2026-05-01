@@ -509,10 +509,16 @@ body {
     color: #ff0050;
 }
 
-.connect-btn--wechat:hover {
-    background: rgba(7, 193, 96, 0.08);
-    border-color: rgba(7, 193, 96, 0.3);
-    color: #07c160;
+.connect-btn--bilibili:hover {
+    background: rgba(0, 174, 236, 0.08);
+    border-color: rgba(0, 174, 236, 0.3);
+    color: #00aeec;
+}
+
+.connect-btn--email:hover {
+    background: rgba(245, 166, 35, 0.08);
+    border-color: rgba(245, 166, 35, 0.3);
+    color: var(--accent-amber);
 }
 
 /* === Footer === */
