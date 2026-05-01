@@ -390,6 +390,12 @@ body {
 }
 
 /* === Bento Cards (Glassmorphism) === */
+a.bento-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 .bento-card {
     position: relative;
     background: var(--card-bg);
