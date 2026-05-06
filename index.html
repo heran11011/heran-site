@@ -10,7 +10,25 @@
     <meta property="og:title" content="Heran · 禾冉 - AI 运营与自动化">
     <meta property="og:description" content="分享各种 AI 使用技巧、自动化工作流。">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://heran11011.github.io/heran-site/">
     <meta name="twitter:card" content="summary_large_image">
+    
+    <link rel="canonical" href="https://heran11011.github.io/heran-site/">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Heran",
+      "url": "https://heran11011.github.io/heran-site/",
+      "jobTitle": "AI & Automation Explorer",
+      "sameAs": [
+        "https://github.com/heran11011",
+        "https://www.xiaohongshu.com/user/profile/663de8950000000007005e04"
+      ]
+    }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,12 +49,12 @@
     </div>
 
     <!-- Minimal Fixed Nav -->
-    <nav class="nav" id="nav">
+    <nav class="nav" id="nav" aria-label="Main Navigation">
         <div class="nav__inner">
-            <a href="#" class="nav__logo magnetic" data-strength="15">H.</a>
+            <a href="#" class="nav__logo magnetic" data-strength="15" aria-label="Back to home">H.</a>
             <div class="nav__links">
                 <a href="#works" class="nav__link magnetic" data-strength="10">Works</a>
-                <a href="https://github.com/heran11011" target="_blank" rel="noopener" class="nav__link magnetic" data-strength="10">GitHub</a>
+                <a href="https://github.com/heran11011" target="_blank" rel="noopener" class="nav__link magnetic" data-strength="10" aria-label="Visit Heran's GitHub profile">GitHub</a>
             </div>
         </div>
     </nav>
@@ -50,7 +68,7 @@
             
             <div class="hero__content">
                 <div class="hero__avatar-wrap reveal">
-                    <img src="avatar.jpg" alt="Heran" class="hero__avatar">
+                    <img src="avatar.jpg" alt="Heran's portrait" class="hero__avatar" width="64" height="64">
                 </div>
                 
                 <h1 class="hero__title reveal">
@@ -65,10 +83,10 @@
                 </p>
 
                 <div class="hero__socials reveal">
-                    <a href="https://www.xiaohongshu.com/user/profile/663de8950000000007005e04" target="_blank" rel="noopener" class="social-btn social-btn--primary magnetic">
+                    <a href="https://www.xiaohongshu.com/user/profile/663de8950000000007005e04" target="_blank" rel="noopener" class="social-btn social-btn--primary magnetic" aria-label="Visit Heran's Xiaohongshu profile">
                         <span>小红书 (6,851+ 赞藏)</span>
                     </a>
-                    <a href="https://github.com/heran11011" target="_blank" rel="noopener" class="social-btn magnetic">GitHub</a>
+                    <a href="https://github.com/heran11011" target="_blank" rel="noopener" class="social-btn magnetic" aria-label="Visit Heran's GitHub profile">GitHub</a>
                 </div>
             </div>
         </section>
@@ -156,28 +174,37 @@
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Custom Cursor
+        // Custom Cursor Logic with Accessibility checks
         const cursor = document.getElementById('cursor');
-        let mouseX = 0, mouseY = 0, cursorX = 0, cursorY = 0;
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
 
-        document.addEventListener('mousemove', e => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-        });
+        if (!prefersReducedMotion && !isTouchDevice && window.innerWidth > 768) {
+            document.body.classList.add('has-custom-cursor');
+            
+            let mouseX = 0, mouseY = 0, cursorX = 0, cursorY = 0;
 
-        function loop() {
-            cursorX += (mouseX - cursorX) * 0.15;
-            cursorY += (mouseY - cursorY) * 0.15;
-            cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
-            requestAnimationFrame(loop);
+            document.addEventListener('mousemove', e => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+
+            function loop() {
+                cursorX += (mouseX - cursorX) * 0.15;
+                cursorY += (mouseY - cursorY) * 0.15;
+                cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
+                requestAnimationFrame(loop);
+            }
+            loop();
+
+            const hoverables = document.querySelectorAll('a, button, .bento-card');
+            hoverables.forEach(el => {
+                el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
+                el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+            });
+        } else {
+            cursor.style.display = 'none';
         }
-        loop();
-
-        const hoverables = document.querySelectorAll('a, button, .bento-card');
-        hoverables.forEach(el => {
-            el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
-            el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
-        });
 
         // Magnetic Effect
         const magnetics = document.querySelectorAll('.magnetic');
